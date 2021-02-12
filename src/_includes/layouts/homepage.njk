@@ -1,0 +1,95 @@
+{% extends "base.njk" %}
+
+{% block pageHeader %}{% endblock %}
+
+{% block content %}
+
+    <div class="hero-slider">
+
+        {% for banner in banners %}
+            <div class="single-slide" style="background-image: url({{ banner.background }})">
+                <div class="inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="slide-content">
+                                    <h2>{{ banner.headline }}</h2>
+                                    <p>{{ banner.blurb }}</p>
+                                    <div class="slide-btn">
+                                        <a href="{{ banner.link.url }}" class="button">{{ banner.link.text }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="{{ banner.image }}" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>        
+<div class="portfolio-area sp">
+        <div class="container">
+            <div class="portfolio-heading">
+                <h2>Portfolios</h2>
+                <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+            </div>
+            <div class="row">
+
+                {% for portfolio in collections.portfolios %}
+                <div class="single-portfolio col-md-4">
+                    <div class="inner">
+                        <div class="portfolio-img">
+                            <img src="{{ portfolio.data.img }}" alt="portfolio-image">
+                            <div class="hover-content">
+                                <div>
+                                    <a href="{{ portfolio.data.heading.url }}" class="button">{{ portfolio.data.link.text }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <a href="{{ portfolio.data.heading.url }}"><h3>{{ portfolio.data.heading.text }}</h3></a>
+                            <span>{{ portfolio.data.spanText }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="row">
+                <div class="col-12 text-center" data-margin="40px 0 0">
+                    <a href="#FIXME" class="button">More Works</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="spb">           
+    <div class="brand-area">
+        <div class="container">
+            <div class="portfolio-heading">
+                <h2>Brands</h2>
+                <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+            </div>
+            <div class="row">
+
+            {% for brand in collections.brands %}
+                <div class="col-md-3 col-6 single-brand">
+                    <div class="inner">
+                        <a href="#">
+                            <img src="{{brand.data.img}}" alt="">
+                        </a>
+                        <span>{{ brand.data.name }} </span>
+                    </div>
+                </div>
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>        
+</div>
+
+{% endblock %}

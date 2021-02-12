@@ -1,0 +1,23 @@
+{
+    "phone": "79775056123",
+    "email": "esmeralda_walsh@lucy.name",
+    "address": "30 Heathcote Vista, Cassinfort, LA",
+    "socials": [
+        {
+            "name": "facebook",
+            "url": "http://www.facebook.com"
+        },
+        {
+            "name": "twitter",
+            "url": "http://www.twitter.com"
+        },
+        {
+            "name": "linkedin",
+            "url": "http://www.linkedin.com"
+        },
+        {
+            "name": "pinterest",
+            "url": "http://www.pinterest.com"
+        }
+    ]
+}
